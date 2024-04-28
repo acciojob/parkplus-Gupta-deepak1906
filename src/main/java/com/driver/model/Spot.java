@@ -1,6 +1,7 @@
 package com.driver.model;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,6 +19,11 @@ public class Spot {
     SpotType spotType;
     private Integer pricePerHour;
     private Boolean occupied;
+
+    // No-Agrs Constructor
+    public Spot(){
+        reservationList=new ArrayList<>();
+    }
 
     public int getId() {
         return id;
